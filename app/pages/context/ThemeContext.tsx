@@ -17,7 +17,7 @@ type PropsType = {
     dispatch: React.Dispatch<ActionType>
 }
 
-export const INITIAL_STATE = {
+export const INITIAL_STATE :StateType= {
     theme: "dark",
     fontSize:16
 }

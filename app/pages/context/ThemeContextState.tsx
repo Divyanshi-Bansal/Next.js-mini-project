@@ -8,14 +8,14 @@ export const ThemeContextState = (props: {children:React.ReactNode}) => {
     // const [state, setState] = useState<StateType>(INITIAL_STATE);
     // const [dispatch, setDispatch] = useState<React.Dispatch<ActionType>>(()=>{});
     
-    const reducer = (state : StateType, action : ActionType) => {
+    const reducer = (state : StateType, action : ActionType) :StateType  => {
         switch (action.type) {
             case "CHANGE_THEME":
                 return {...state, theme: state.theme === "dark" ? "light" : "dark"}
             case "CHANGE_FONTSIZE":
-                return {...state, fontSize: action.payload};
+                return {...state, fontSize: action.payload !== undefined ? action.payload : 16};
             default:
-                return {theme: "dark", fontsize:16};
+                return state;
         }
     }
 
