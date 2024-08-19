@@ -1,6 +1,8 @@
 import Image from "next/image";
 import {practiceTS} from "./pages/PracticeTS";
 import { ReactInTS } from "./pages/ReactInTS";
+import { ThemeContextState } from "./pages/context/ThemeContextState";
+// import { ThemeContextState } from "./pages/context/ThemeContext";
 
 export default function Home() {
   practiceTS();
@@ -111,7 +113,9 @@ export default function Home() {
           </p>
         </a>
       </div>
-      <ReactInTS />
+      <ThemeContextState>
+        <ReactInTS />
+      </ThemeContextState>
     </main>
   );
 }
