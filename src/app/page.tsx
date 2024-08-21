@@ -1,7 +1,7 @@
 import Image from "next/image";
-import {practiceTS} from "./pages/PracticeTS";
-import { ReactInTS } from "./pages/ReactInTS";
-import { ThemeContextState } from "./pages/context/ThemeContextState";
+import { practiceTS } from "./learning/PracticeTS";
+import { ThemeContextState } from "./learning/context/ThemeContextState";
+import { ReactInTS } from "./learning/ReactInTS";
 // import { ThemeContextState } from "./pages/context/ThemeContext";
 
 export default function Home() {
