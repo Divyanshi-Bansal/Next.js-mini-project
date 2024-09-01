@@ -1,6 +1,7 @@
 import { useState } from "react";
-import PracticeContext from "./practiceContext";
+
 import { ReactInTS } from "../ReactInTS";
+import PracticeContext from "./PracticeContext";
 
 export function HelperFunction(props:any){
     const [num, setNum] = useState(1);
