@@ -29,24 +29,21 @@ export default function Home() {
     "border":"1px solid black",
     "boxShadow": "0 0 10px rgba(0, 0, 0, 0.8)",
     "padding":"5px",
-    "border-radius":"7px",
+    "borderRadius":"7px",
     "display":"flex",
-    "align-items":"center",
-    "font-weight":"bold"
+    "alignItems":"center",
+    "fontWeight":"bold"
   }
   
   // practiceTS();
   return (
-    <main style={{border:"1px solid red"}}>
-      <h1>HOMEP PAGE</h1>
+    <main>
+      <h1>HOME PAGE</h1>
       <ThemeContextState>
         <ReactInTS />
       </ThemeContextState>
       <div style={{display:"flex", alignItems:"center", justifyContent:"center",margin:"10px"}}>
         <button style={TODO_BUTTON_STYLE}><a href={TODO_FULL_URL}>Check ToDo List</a></button>
-      </div>
-      <div>
-        <p>gfgfdf</p>
       </div>
       <Link href="/product">Product</Link>
     </main>

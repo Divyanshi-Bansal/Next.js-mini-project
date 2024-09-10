@@ -1,3 +1,5 @@
+// "use client"
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
@@ -6,11 +8,11 @@ import React from 'react';
 //   title:"Product" //it will replace %s in title of template in layout
 // }
 
-export const metadata : Metadata = {
-  title:{
-    absolute:"Product" //title will be Product only
-  }
-}
+// export const metadata : Metadata = {
+//   title:{
+//     absolute:"Product" //title will be Product only
+//   }
+// }
 const page = () => {
   const productNo = 5;
 

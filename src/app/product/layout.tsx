@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 //   discription:"product layout metadata discription"
 // }
 
-//page.tsx metadata overwirtes the values of metadata of layout.
+//page.tsx metadata override the values of metadata of layout.
 // nested layouts can override metadata defined in the parent layout.
 
 // export const metadata : Metadata = {
@@ -17,14 +17,14 @@ const inter = Inter({ subsets: ["latin"] });
 //   description:"layout desc"
 // }
 
-export const metadata : Metadata = {
-  title:{
-    absolute:"",
-    default:"next.js tutorial - metadata title", //it will show if absolute and template title is empty.
-    template:"%s | learning" //product | learning
-  },
-  description:"layout desc"
-}
+// export const metadata : Metadata = {
+//   title:{
+//     absolute:"",
+//     default:"next.js tutorial - metadata title", //it will show if absolute and template title is empty.
+//     template:"%s | learning" //product | learning
+//   },
+//   description:"layout desc"
+// }
 
 export default function RootLayout({
     children,
@@ -32,14 +32,12 @@ export default function RootLayout({
     children: React.ReactNode;
   }>) {
     return (
-      <html lang="en">
-        <header style={{backgroundColor:"lightgoldenrodyellow", padding:"10px"}}>
-          <p>Product landing Layout</p>
-        </header>
-        <body className={inter.className}>{children}</body>
-        <footer style={{backgroundColor:"lightgoldenrodyellow", padding:"10px"}}>
-          <p>Product landing Footer</p>
-        </footer>
-      </html>
+      <>
+        {/* the header footer part can override the main layout header footer as it is also defined there */}
+          <section style={{backgroundColor:"lightgoldenrodyellow", padding:"10px"}}>
+            <p>Product landing Layout</p>
+          </section>
+          {children}
+      </>
     );
   }
