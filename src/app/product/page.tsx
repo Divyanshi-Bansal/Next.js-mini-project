@@ -1,7 +1,8 @@
-// "use client"
+"use client"
 
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 // export const metadata : Metadata = {
@@ -13,7 +14,9 @@ import React from 'react';
 //     absolute:"Product" //title will be Product only
 //   }
 // }
-const page = () => {
+const ProductPage = () => {
+const router = useRouter();
+  
   const productNo = 5;
 
   return (
@@ -24,8 +27,11 @@ const page = () => {
       <p><Link href="product/2">Product sec 2</Link></p>
       <p><Link href="product/3">Product sec 3</Link></p>
       <p><Link href={`product/${productNo}`}>Product sec {productNo}</Link></p>
+      <button onClick={()=>{
+        router.replace('/order-product');
+      }}>Order</button>
     </div>
   )
 }
 
-export default page
+export default ProductPage

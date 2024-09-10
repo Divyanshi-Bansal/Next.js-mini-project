@@ -6,6 +6,7 @@ import { ThemeContextState } from "./learning/context/ThemeContextState";
 import { ReactInTS } from "./learning/ReactInTS";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 // import { ThemeContextState } from "./pages/context/ThemeContext";
 
 
@@ -17,6 +18,8 @@ import Link from "next/link";
 
 export default function Home() {
   const [url, setUrl] = useState('');
+
+  const router = useRouter();
 
   useEffect(()=>{
     const url = window.location.href;
@@ -45,7 +48,14 @@ export default function Home() {
       <div style={{display:"flex", alignItems:"center", justifyContent:"center",margin:"10px"}}>
         <button style={TODO_BUTTON_STYLE}><a href={TODO_FULL_URL}>Check ToDo List</a></button>
       </div>
-      <Link href="/product">Product</Link>
+      <div>
+        <Link href="/product">Product</Link>
+      </div>
+      <div>
+        <button onClick={()=>{
+          router.push('/order-product')
+        }}>Wanna place a order ?</button>
+      </div>
     </main>
   );
 }
