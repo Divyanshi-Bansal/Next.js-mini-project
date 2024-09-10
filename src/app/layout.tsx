@@ -1,8 +1,14 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-// import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+// export const metadata = {
+//   title:"main layout metadata title",
+//   content:"main layout metadata content",
+//   discription:"main layout metadata discription"
+// }
+
+// nested layouts can override metadata defined in the parent layout.
 
 export default function RootLayout({
   children,
