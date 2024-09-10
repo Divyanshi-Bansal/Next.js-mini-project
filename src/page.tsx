@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image";
-import { practiceTS } from "./learning/PracticeTS";
-import { ThemeContextState } from "./learning/context/ThemeContextState";
-import { ReactInTS } from "./learning/ReactInTS";
+import { practiceTS } from "./app/learning/PracticeTS";
+import { ThemeContextState } from "./app/learning/context/ThemeContextState";
+import { ReactInTS } from "./app/learning/ReactInTS";
 import { useEffect, useState } from "react";
 // import { ThemeContextState } from "./pages/context/ThemeContext";
 
@@ -27,9 +27,9 @@ export default function Home() {
     "font-weight":"bold"
   }
   
-  practiceTS();
+  // practiceTS();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main style={{border:"1px solid red"}}>
       <h1>HOME PAGE</h1>
       <ThemeContextState>
         <ReactInTS />
