@@ -5,7 +5,10 @@ import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import '../globals.css';
 
-const Layout = ({children}: Readonly<{
+// reinitialize the state, child of layout file
+// layout >> template >> page
+
+const Template = ({children}: Readonly<{
     children: React.ReactNode;
 }>) => {
     const navLinks = [
@@ -20,6 +23,7 @@ const Layout = ({children}: Readonly<{
 
   return (
     <div>
+        <h1>Template file</h1>
         <div>
             <input value={input} onChange={(e)=>{
                 setInput(e.target.value);
@@ -42,5 +46,5 @@ const Layout = ({children}: Readonly<{
   )
 }
 
-export default Layout
+export default Template
 
