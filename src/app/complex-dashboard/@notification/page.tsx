@@ -8,7 +8,9 @@ const NotificationPage = () => {
       <p>Notification page</p>
       <div>
         <button>
-            <Link href='/complex-dashboard/archived'>Archived</Link>
+            <Link href='/complex-dashboard/archived'>Archived</Link> 
+            {/* you can't load this route url on browser, it'll show 404.
+            hence it's a sub navigation within slots, achived folder is in slot */}
         </button>
       </div>
     </Card>
