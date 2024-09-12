@@ -4,12 +4,16 @@ import React from 'react';
 
 
 type ParamsType = {
-    product_sec_id: string,
+    product_sec_id: BigInteger,
     review_id: number
 }
 
-const page = ({params} : {params:ParamsType}) => {
+const ReviewIdPage = ({params} : {params:ParamsType}) => {
   const router = useRouter();
+  const errorfunc = () =>{
+    throw new Error("reiew id error page");
+  }
+  errorfunc();
   return (
     <div>
       <h1>Review {params.review_id} for product sec {params.product_sec_id}</h1>
@@ -20,4 +24,6 @@ const page = ({params} : {params:ParamsType}) => {
   )
 }
 
-export default page
+export default ReviewIdPage
+
+// It 

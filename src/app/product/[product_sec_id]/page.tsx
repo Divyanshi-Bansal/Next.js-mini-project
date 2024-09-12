@@ -1,7 +1,7 @@
 import React from 'react'
 
 const page = ({params}:{
-    params: {product_sec_id: string}
+    params: {product_sec_id: BigInteger}
 }) => {
   return (
     <div>

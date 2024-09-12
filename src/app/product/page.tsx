@@ -19,6 +19,17 @@ const router = useRouter();
   
   const productNo = 5;
 
+  const getRandomInt = (count: number) =>{
+    return Math.floor(Math.random()*count);
+  }
+
+  const randomNo = getRandomInt(2);
+
+  
+    if (randomNo === 1) {
+      throw new Error("Error thrown from product page");
+    }
+
   return (
     <div>
       <h1>Product home page</h1>
