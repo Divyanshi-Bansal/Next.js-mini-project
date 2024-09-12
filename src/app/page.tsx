@@ -7,6 +7,7 @@ import { ReactInTS } from "./learning/ReactInTS";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import ComplexDashboardPage from "./complex-dashboard/page";
 // import { ThemeContextState } from "./pages/context/ThemeContext";
 
 
@@ -56,6 +57,12 @@ export default function Home() {
           router.push('/order-product')
         }}>Wanna place a order ?</button>
       </div>
+      <div>
+        <button type="button" onClick={()=>{
+          router.push("complex-dashboard")
+        }}>Complex Dashboard</button>
+      </div>
+      <ComplexDashboardPage/>
     </main>
   );
 }
