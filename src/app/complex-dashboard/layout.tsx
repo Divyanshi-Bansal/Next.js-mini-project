@@ -25,7 +25,6 @@ const ComplexDashboardLayout = ({children, users, revenue, notification, login}:
                 <div>{revenue}</div>
             </div>
             <div style={{display:"flex"}}>{notification}</div>
-            {login}
             </div>
         </div>
         :
