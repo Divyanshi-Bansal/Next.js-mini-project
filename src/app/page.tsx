@@ -63,6 +63,11 @@ export default function Home() {
         }}>Complex Dashboard</button>
       </div>
       <ComplexDashboardPage/>
+      <div>
+        <h1>Photos: <span>mix concepts of parallel intercepting routes, params data</span>
+          <button><Link href="/photo-feed">Open</Link></button>
+        </h1>
+      </div>
     </main>
   );
 }

@@ -11,7 +11,7 @@ const ComplexDashboardLayout = ({children, users, revenue, notification, login}:
     // by adding @before folder name, so basically we can't go to that folder's page by route url
     // but we can add these components in layout : parallel routes
 
-    const isUserLoggedIn = false;
+    const isUserLoggedIn = true;
   return (
     <>
     { isUserLoggedIn ?
