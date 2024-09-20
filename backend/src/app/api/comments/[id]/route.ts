@@ -25,3 +25,16 @@ export async function PATCH(request: Request, {params}:{
     comments[index].text = body.text;
     return Response.json(comments[index]);
 }
+
+export async function DELETE(_request:Request , {params}:{
+    params:{
+        id:string
+    }
+}){
+    console.log("dto index", params.id);
+    const deleteCommentIndex = comments.findIndex(comment => comment.id === parseInt(params.id));
+    console.log("deleted index", deleteCommentIndex);
+    comments.splice(deleteCommentIndex-1, 1);
+    console.log("comments---", comments);
+    return new Response("comment has been deleted successfully!!");
+}
